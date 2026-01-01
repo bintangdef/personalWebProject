@@ -1,22 +1,25 @@
-body {
-  padding: 0;
-  margin: 0;
+.page {
+  width: 1440px;
+  margin-inline: auto;
 }
 
 /* head section */
+.head-bg {
+  background-color: #feee91;
+}
+
 .head-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #feee91;
-  padding-top: 7rem;
+  padding-top: 3.5rem;
   padding-left: 7rem;
   gap: 14rem;
 }
 
 .head-img {
   width: 700px;
-  border-radius: 15% 0 0 0;
+  border-radius: 4% 0 0 0;
 }
 
 /* profile section */
@@ -24,7 +27,6 @@ body {
   margin-block: 3.5rem;
   display: flex;
   flex-direction: column;
-  padding-inline: 7rem;
 }
 
 .profile-head {
@@ -32,6 +34,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  padding-inline: 7rem;
 }
 
 .profile-img {
@@ -49,14 +52,11 @@ body {
 
 .profile-info {
   display: flex;
-  /* border: 2px solid; */
-  gap: 10.5rem;
-
-  padding-left: 7rem;
+  gap: 4rem;
+  padding-inline: 7rem;
 }
 
 .info {
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -74,26 +74,26 @@ body {
 }
 
 /* projects section */
+.project-bg {
+  background-color: #f6f4ed;
+}
+
 .project-container {
   padding: 3.5rem 7rem;
-  background-color: #f6f4ed;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 .projects-list {
-  /* border: 2px solid red; */
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .project {
-  /* border: 2px solid; */
-  flex: 1;
   display: flex;
   flex-direction: column;
-  /* gap: 1rem; */
+  width: 600px;
 }
 
 .project-link {
@@ -114,12 +114,14 @@ body {
   width: 80%;
 }
 
-/* footer container section */
-.footer-container {
-  /* height: 50vh; */
-  /* border: 2px solid; */
+/* contact section */
+.contact-container {
   padding: 7rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .contact-button {
@@ -153,8 +155,9 @@ body {
 }
 
 .icons a {
-  color: #1f2937; /* your desired color */
+  color: #1f2937;
   text-decoration: none;
+  margin-bottom: 0;
 }
 
 /* footer section */
@@ -166,4 +169,31 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* responsiveness */
+@media (width > 1440px) {
+  /* head-section */
+  .head-container {
+    padding-left: 0;
+  }
+
+  .head-img {
+    border-radius: 2% 2% 0 0;
+  }
+
+  /* profile-section */
+  .profile-head {
+    padding-inline: 0;
+  }
+
+  .profile-info {
+    padding-inline: 0;
+    gap: 0rem;
+  }
+
+  /* projects-section */
+  .project-container {
+    padding-inline: 0;
+  }
 }
